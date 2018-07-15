@@ -4,7 +4,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 4
+Sheet 1 3
 Title ""
 Date ""
 Rev ""
@@ -557,12 +557,11 @@ S 9600 1750 1100 750
 U 5B5131EA
 F0 "Power" 50
 F1 "Power.sch" 50
-$EndSheet
-$Sheet
-S 9600 2650 1100 750 
-U 5B513203
-F0 "Encoders" 50
-F1 "Encoders.sch" 50
+F2 "Battery" I L 9600 1900 50 
+F3 "MOT_Enable" I L 9600 2150 50 
+F4 "V_MOT" I L 9600 2000 50 
+F5 "PWR_SBC_EN" I L 9600 2250 50 
+F6 "V_BAT" I L 9600 2400 50 
 $EndSheet
 Text Label 8800 950  0    50   ~ 0
 PE9_TIM_MOT1_A
@@ -587,5 +586,24 @@ Wire Wire Line
 Wire Wire Line
 	8700 1350 9600 1350
 Wire Wire Line
-	8700 1450 9600 1450
+	8700 1450 9100 1450
+Wire Wire Line
+	9600 2000 9100 2000
+Wire Wire Line
+	9100 2000 9100 1450
+Connection ~ 9100 1450
+Wire Wire Line
+	9100 1450 9600 1450
+Text Label 8850 2150 0    50   ~ 0
+PWR_MOT_EN
+Text Label 8850 2250 0    50   ~ 0
+PWR_SBC_EN
+Wire Wire Line
+	8750 2150 9600 2150
+Wire Wire Line
+	8750 2250 9600 2250
+Text Label 8800 2400 0    50   ~ 0
+PC5_ADC_BATT_VOL
+Wire Wire Line
+	8750 2400 9600 2400
 $EndSCHEMATC
