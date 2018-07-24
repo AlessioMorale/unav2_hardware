@@ -153,9 +153,9 @@ Wire Wire Line
 	3600 2400 3650 2400
 Text HLabel 3650 2500 2    50   Input ~ 10
 MOT_EN
-Text HLabel 3650 2700 2    50   Input ~ 10
-MOT2_A
 Text HLabel 3650 2600 2    50   Input ~ 10
+MOT2_A
+Text HLabel 3650 2700 2    50   Input ~ 10
 MOT2_B
 Wire Wire Line
 	3600 2500 3650 2500

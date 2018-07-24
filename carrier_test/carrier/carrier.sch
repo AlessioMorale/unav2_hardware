@@ -214,7 +214,7 @@ PE2
 Text Label 1250 2100 0    50   ~ 0
 PE4_KEY0
 Text Label 1250 2200 0    50   ~ 0
-PE6_I_FAN_INDEX
+PE6_TIM_AUX3_PWM
 Text Label 1250 2300 0    50   ~ 0
 PC0_ADC_MOT1_CUR
 Text Label 1250 2400 0    50   ~ 0
@@ -273,8 +273,8 @@ Text Label 2600 3400 0    50   ~ 0
 PE12_TIM_MOT3_A
 Text Label 2600 3500 0    50   ~ 0
 PE14_O_MOT_ENABLE
-Text Label 2850 2200 0    50   ~ 0
-PC13
+Text Label 2600 2200 0    50   ~ 0
+PC13_I_FAN_INDEX
 Text Label 2600 3600 0    50   ~ 0
 PB10_USART3_TX
 Text Label 2600 3700 0    50   ~ 0
@@ -448,7 +448,7 @@ Wire Wire Line
 Text Label 1300 4900 0    50   ~ 0
 PE1_O_PWR_SBC_EN
 Text Label 1300 5000 0    50   ~ 0
-PB9
+PB9_TIM_AUX_PWM
 Text Label 1300 5200 0    50   ~ 0
 PB5_SPI1_MOSI
 Text Label 1300 5300 0    50   ~ 0
@@ -520,7 +520,7 @@ PD11
 Text Label 2600 6600 0    50   ~ 0
 PD9
 Text Label 2600 6700 0    50   ~ 0
-PB15
+PB15_TIM_AUX2_PWM
 Wire Wire Line
 	2550 1900 3250 1900
 Text Notes 3650 5150 0    50   ~ 10
@@ -551,6 +551,7 @@ F7 "I_BAT" I L 7200 4700 50
 F8 "Temp" I L 7200 4850 50 
 F9 "FAN_ON" I L 7200 4950 50 
 F10 "AUX_ON" I L 7200 5050 50 
+F11 "FAN_INDEX" I L 7200 5150 50 
 $EndSheet
 Text Label 6350 1650 0    50   ~ 0
 PE9_TIM_MOT1_A
@@ -868,4 +869,12 @@ Text Label 6400 4950 0    50   ~ 0
 PE5_TIM_FAN_PWM
 Wire Wire Line
 	6350 4950 7200 4950
+Text Label 6400 5050 0    50   ~ 0
+PE6_TIM_AUX3_PWM
+Wire Wire Line
+	6350 5050 7200 5050
+Text Label 6400 5150 0    50   ~ 0
+PC13_I_FAN_INDEX
+Wire Wire Line
+	6350 5150 7200 5150
 $EndSCHEMATC

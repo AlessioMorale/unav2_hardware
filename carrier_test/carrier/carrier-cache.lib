@@ -242,19 +242,21 @@ X ~ 2 100 0 40 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# agg-kicad:CONN_01x02
+# agg-kicad:CONN_01x03
 #
-DEF agg-kicad:CONN_01x02 J 0 1 Y N 1 F N
+DEF agg-kicad:CONN_01x03 J 0 1 Y N 1 F N
 F0 "J" -50 100 50 H V L CNN
-F1 "agg-kicad:CONN_01x02" -50 -200 50 H V L CNN
+F1 "agg-kicad:CONN_01x03" -50 -300 50 H V L CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
+S 0 -195 -25 -205 0 1 0 F
 S 0 -95 -25 -105 0 1 0 F
 S 0 5 -25 -5 0 1 0 F
-S 0 50 -50 -150 0 1 0 f
+S 0 50 -50 -250 0 1 0 f
 X 1 1 100 0 100 L 50 50 1 1 P
 X 2 2 100 -100 100 L 50 50 1 1 P
+X 3 3 100 -200 100 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
