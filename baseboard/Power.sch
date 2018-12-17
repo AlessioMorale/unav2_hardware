@@ -70,7 +70,7 @@ $EndComp
 Wire Wire Line
 	2350 3100 2350 3000
 Text HLabel 1850 2800 0    50   Input ~ 0
-MOT_Enable
+MAIN_Enable
 $Comp
 L agg-kicad:R R5
 U 1 1 5B4B696B
