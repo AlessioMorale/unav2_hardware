@@ -1,0 +1,250 @@
+EESchema Schematic File Version 4
+LIBS:proto1-cache
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 4 5
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L agg-kicad:NFET2_SOT Q?
+U 1 1 5D4FF9A3
+P 3300 1650
+AR Path="/5B5131EA/5D4FF9A3" Ref="Q?"  Part="1" 
+AR Path="/5D4FF9A3" Ref="Q?"  Part="1" 
+AR Path="/5D4F93CF/5D4FF9A3" Ref="Q1"  Part="1" 
+F 0 "Q1" H 3388 1554 50  0000 L CNN
+F 1 "NFET2_SOT" H 3388 1645 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-6" H 3300 1650 50  0001 C CNN
+F 3 "" H 3300 1650 50  0001 C CNN
+	1    3300 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L agg-kicad:NFET2_SOT Q?
+U 2 1 5D4FF9A9
+P 3800 2450
+AR Path="/5B5131EA/5D4FF9A9" Ref="Q?"  Part="2" 
+AR Path="/5D4FF9A9" Ref="Q?"  Part="2" 
+AR Path="/5D4F93CF/5D4FF9A9" Ref="Q1"  Part="2" 
+F 0 "Q1" H 3887 2354 50  0000 L CNN
+F 1 "NFET2_SOT" H 3887 2445 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-6" H 3800 2450 50  0001 C CNN
+F 3 "" H 3800 2450 50  0001 C CNN
+	2    3800 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5D4FF9AF
+P 3800 2750
+AR Path="/5B5131EA/5D4FF9AF" Ref="#PWR?"  Part="1" 
+AR Path="/5D4FF9AF" Ref="#PWR?"  Part="1" 
+AR Path="/5D4F93CF/5D4FF9AF" Ref="#PWR0133"  Part="1" 
+F 0 "#PWR0133" H 3800 2500 50  0001 C CNN
+F 1 "GND" H 3805 2577 50  0000 C CNN
+F 2 "" H 3800 2750 50  0001 C CNN
+F 3 "" H 3800 2750 50  0001 C CNN
+	1    3800 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 2350 3800 2300
+$Comp
+L agg-kicad:CONN_01x03 J?
+U 1 1 5D4FF9B6
+P 4400 1500
+AR Path="/5B5131EA/5D4FF9B6" Ref="J?"  Part="1" 
+AR Path="/5D4FF9B6" Ref="J?"  Part="1" 
+AR Path="/5D4F93CF/5D4FF9B6" Ref="J6"  Part="1" 
+F 0 "J6" H 4323 1441 50  0000 R CNN
+F 1 "FAN" H 4323 1350 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 4400 1500 50  0001 C CNN
+F 3 "" H 4400 1500 50  0001 C CNN
+	1    4400 1500
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 1500 4300 1500
+Wire Wire Line
+	2300 1750 2800 1750
+Wire Wire Line
+	2300 2550 3300 2550
+$Comp
+L agg-kicad:CONN_01x02 J?
+U 1 1 5D4FF9C1
+P 4400 2300
+AR Path="/5D4FF9C1" Ref="J?"  Part="1" 
+AR Path="/5D4F93CF/5D4FF9C1" Ref="J7"  Part="1" 
+F 0 "J7" H 4323 2199 50  0000 R CNN
+F 1 "CONN_01x02" H 4323 2290 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 4400 2300 50  0001 C CNN
+F 3 "" H 4400 2300 50  0001 C CNN
+	1    4400 2300
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4250 1600 4250 2200
+Wire Wire Line
+	4250 2200 4300 2200
+Wire Wire Line
+	4250 1600 4300 1600
+Wire Wire Line
+	3800 2300 4300 2300
+Wire Wire Line
+	3300 1500 3300 1550
+Wire Wire Line
+	4050 1700 4300 1700
+$Comp
+L Device:R_Small R?
+U 1 1 5D4FF9CE
+P 2900 1750
+AR Path="/5D4FF9CE" Ref="R?"  Part="1" 
+AR Path="/5D4F93CF/5D4FF9CE" Ref="R8"  Part="1" 
+F 0 "R8" V 2704 1750 50  0000 C CNN
+F 1 "330" V 2795 1750 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 2900 1750 50  0001 C CNN
+F 3 "~" H 2900 1750 50  0001 C CNN
+	1    2900 1750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3000 1750 3050 1750
+Wire Wire Line
+	3300 1850 3300 1900
+$Comp
+L Device:R_Small R?
+U 1 1 5D4FF9D6
+P 3150 1900
+AR Path="/5D4FF9D6" Ref="R?"  Part="1" 
+AR Path="/5D4F93CF/5D4FF9D6" Ref="R9"  Part="1" 
+F 0 "R9" V 3254 1900 50  0000 C CNN
+F 1 "10k" V 3345 1900 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 3150 1900 50  0001 C CNN
+F 3 "~" H 3150 1900 50  0001 C CNN
+	1    3150 1900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3050 1750 3050 1900
+Connection ~ 3050 1750
+Wire Wire Line
+	3050 1750 3100 1750
+$Comp
+L power:GND #PWR?
+U 1 1 5D4FF9E6
+P 3300 1950
+AR Path="/5B5131EA/5D4FF9E6" Ref="#PWR?"  Part="1" 
+AR Path="/5D4FF9E6" Ref="#PWR?"  Part="1" 
+AR Path="/5D4F93CF/5D4FF9E6" Ref="#PWR0134"  Part="1" 
+F 0 "#PWR0134" H 3300 1700 50  0001 C CNN
+F 1 "GND" H 3305 1777 50  0000 C CNN
+F 2 "" H 3300 1950 50  0001 C CNN
+F 3 "" H 3300 1950 50  0001 C CNN
+	1    3300 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 2650 3800 2700
+$Comp
+L Device:R_Small R?
+U 1 1 5D4FF9EE
+P 3650 2700
+AR Path="/5D4FF9EE" Ref="R?"  Part="1" 
+AR Path="/5D4F93CF/5D4FF9EE" Ref="R11"  Part="1" 
+F 0 "R11" V 3754 2700 50  0000 C CNN
+F 1 "10k" V 3845 2700 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 3650 2700 50  0001 C CNN
+F 3 "~" H 3650 2700 50  0001 C CNN
+	1    3650 2700
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 5D4FF9F4
+P 3400 2550
+AR Path="/5D4FF9F4" Ref="R?"  Part="1" 
+AR Path="/5D4F93CF/5D4FF9F4" Ref="R10"  Part="1" 
+F 0 "R10" V 3204 2550 50  0000 C CNN
+F 1 "330" V 3295 2550 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 3400 2550 50  0001 C CNN
+F 3 "~" H 3400 2550 50  0001 C CNN
+	1    3400 2550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3500 2550 3550 2550
+Wire Wire Line
+	3550 2550 3550 2700
+Connection ~ 3550 2550
+Wire Wire Line
+	3550 2550 3600 2550
+Wire Wire Line
+	3750 2700 3800 2700
+Connection ~ 3800 2700
+Wire Wire Line
+	3800 2700 3800 2750
+Text HLabel 2300 1750 0    50   Input ~ 0
+TIM_FAN_PWM
+Text HLabel 2300 2550 0    50   Input ~ 0
+TIM_AUX_PWM
+Text HLabel 2300 900  0    50   Input ~ 0
+V_BATT
+Text HLabel 2300 1300 0    50   Input ~ 0
+I_FAN_INDEX
+Wire Wire Line
+	4250 1600 4250 900 
+Connection ~ 4250 1600
+Wire Wire Line
+	4050 1700 4050 1300
+Wire Wire Line
+	4050 1300 2300 1300
+$Comp
+L power:GND #PWR?
+U 1 1 5D505773
+P 2450 1150
+AR Path="/5B5131EA/5D505773" Ref="#PWR?"  Part="1" 
+AR Path="/5D505773" Ref="#PWR?"  Part="1" 
+AR Path="/5D4F93CF/5D505773" Ref="#PWR0135"  Part="1" 
+F 0 "#PWR0135" H 2450 900 50  0001 C CNN
+F 1 "GND" H 2455 977 50  0000 C CNN
+F 2 "" H 2450 1150 50  0001 C CNN
+F 3 "" H 2450 1150 50  0001 C CNN
+	1    2450 1150
+	1    0    0    -1  
+$EndComp
+Text HLabel 2300 1050 0    50   Input ~ 0
+GND
+Wire Wire Line
+	2300 1050 2450 1050
+Wire Wire Line
+	2450 1050 2450 1150
+$Comp
+L Device:Polyfuse F1
+U 1 1 5D8D878F
+P 3150 900
+F 0 "F1" V 2925 900 50  0000 C CNN
+F 1 "Polyfuse" V 3016 900 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" H 3200 700 50  0001 L CNN
+F 3 "~" H 3150 900 50  0001 C CNN
+	1    3150 900 
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2300 900  3000 900 
+Wire Wire Line
+	3300 900  4250 900 
+Wire Wire Line
+	3250 1900 3300 1900
+Connection ~ 3300 1900
+Wire Wire Line
+	3300 1900 3300 1950
+$EndSCHEMATC

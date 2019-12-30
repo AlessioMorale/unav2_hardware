@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP INA186
+D Bidirectional, Low- and High-Side Voltage Output, Current-Sense Amplifier, SOT-23-6
+K current monitor shunt sensor bidirectional
+F http://www.ti.com/lit/ds/symlink/ina181.pdf
+$ENDCMP
+#
+#End Doc Library
