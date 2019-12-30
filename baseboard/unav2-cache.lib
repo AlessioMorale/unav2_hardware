@@ -161,6 +161,7 @@ F1 "Device_D_Schottky_x2_KCom_AAK" 0 100 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
+C 0 0 10 0 1 0 F
 P 2 0 1 0 -150 0 150 0 N
 P 2 0 1 0 0 0 0 -100 N
 P 3 0 1 8 -50 -50 -50 50 -50 50 N
@@ -184,6 +185,9 @@ F0 "JP" 0 80 50 H V C CNN
 F1 "Device_Jumper_NO_Small" 10 -60 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
+$FPLIST
+ SolderJumper*Open*
+$ENDFPLIST
 DRAW
 C -40 0 20 0 1 0 N
 C 40 0 20 0 1 0 N
