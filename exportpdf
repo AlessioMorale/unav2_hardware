@@ -1,0 +1,1 @@
+docker run --rm -it -v `pwd`/:/kicad-project productize/kicad-automation-scripts python -m kicad-automation.eeschema.schematic export --file_format=pdf --all_pages /kicad-project/simpleboard.sch /kicad-project/
