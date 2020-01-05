@@ -189,6 +189,10 @@ Wire Wire Line
 	9650 4750 10550 4750
 Wire Wire Line
 	9650 4850 10550 4850
+Text Label 8150 1800 0    50   ~ 0
+TIM_FAN_PWM
+Text Label 9950 850  0    50   ~ 0
+I_FAN_INDEX
 Wire Wire Line
 	1250 1000 1250 1350
 Connection ~ 2250 1350
@@ -733,6 +737,8 @@ Text Label 3850 4100 2    50   ~ 0
 SPI1_MOSI
 Text Label 850  3900 0    50   ~ 0
 PC3
+Text Label 8750 900  0    50   ~ 0
+TIM_AUX_PWM
 $Comp
 L power:GND #PWR0117
 U 1 1 5C39C938
@@ -765,6 +771,51 @@ Wire Wire Line
 	9300 5650 9500 5650
 Wire Wire Line
 	9500 5650 9500 5800
+$Comp
+L agg-kicad:NFET2_SOT Q?
+U 1 1 5C4AA212
+P 9750 800
+AR Path="/5B5131EA/5C4AA212" Ref="Q?"  Part="1" 
+AR Path="/5C4AA212" Ref="Q1"  Part="1" 
+F 0 "Q1" H 9838 796 50  0000 L CNN
+F 1 "NFET2_SOT" H 9838 705 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-6" H 9750 800 50  0001 C CNN
+F 3 "" H 9750 800 50  0001 C CNN
+	1    9750 800 
+	1    0    0    -1  
+$EndComp
+$Comp
+L agg-kicad:NFET2_SOT Q?
+U 2 1 5C4AA219
+P 9150 1700
+AR Path="/5B5131EA/5C4AA219" Ref="Q?"  Part="2" 
+AR Path="/5C4AA219" Ref="Q1"  Part="2" 
+F 0 "Q1" H 9238 1696 50  0000 L CNN
+F 1 "NFET2_SOT" H 9238 1605 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-6" H 9150 1700 50  0001 C CNN
+F 3 "" H 9150 1700 50  0001 C CNN
+	2    9150 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C4AA220
+P 9150 1950
+AR Path="/5B5131EA/5C4AA220" Ref="#PWR?"  Part="1" 
+AR Path="/5C4AA220" Ref="#PWR0118"  Part="1" 
+F 0 "#PWR0118" H 9150 1700 50  0001 C CNN
+F 1 "GND" H 9155 1777 50  0000 C CNN
+F 2 "" H 9150 1950 50  0001 C CNN
+F 3 "" H 9150 1950 50  0001 C CNN
+	1    9150 1950
+	1    0    0    -1  
+$EndComp
+Text Label 8350 850  0    50   ~ 0
+V_BATT
+Wire Wire Line
+	8750 900  9250 900 
+Wire Wire Line
+	8100 1800 8650 1800
 $Comp
 L Device:C_Small C13
 U 1 1 5C65C843
@@ -1114,6 +1165,79 @@ Wire Wire Line
 	10150 2550 10150 2350
 Wire Wire Line
 	10150 2350 10200 2350
+Wire Wire Line
+	9900 850  10250 850 
+$Comp
+L Device:R_Small R8
+U 1 1 5CC504A3
+P 9350 900
+F 0 "R8" V 9154 900 50  0000 C CNN
+F 1 "330" V 9245 900 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 9350 900 50  0001 C CNN
+F 3 "~" H 9350 900 50  0001 C CNN
+	1    9350 900 
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R11
+U 1 1 5CCCC934
+P 9600 1100
+F 0 "R11" V 9404 1100 50  0000 C CNN
+F 1 "10k" V 9495 1100 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 9600 1100 50  0001 C CNN
+F 3 "~" H 9600 1100 50  0001 C CNN
+	1    9600 1100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9500 900  9500 1100
+Wire Wire Line
+	9500 900  9550 900 
+Wire Wire Line
+	9700 1100 9750 1100
+$Comp
+L power:GND #PWR?
+U 1 1 5CD2F745
+P 9750 1100
+AR Path="/5B5131EA/5CD2F745" Ref="#PWR?"  Part="1" 
+AR Path="/5CD2F745" Ref="#PWR0123"  Part="1" 
+F 0 "#PWR0123" H 9750 850 50  0001 C CNN
+F 1 "GND" H 9755 927 50  0000 C CNN
+F 2 "" H 9750 1100 50  0001 C CNN
+F 3 "" H 9750 1100 50  0001 C CNN
+	1    9750 1100
+	1    0    0    -1  
+$EndComp
+Connection ~ 9750 1100
+Wire Wire Line
+	9150 1900 9150 1950
+$Comp
+L Device:R_Small R13
+U 1 1 5CD5EEB2
+P 9000 1950
+F 0 "R13" V 8804 1950 50  0000 C CNN
+F 1 "10k" V 8895 1950 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 9000 1950 50  0001 C CNN
+F 3 "~" H 9000 1950 50  0001 C CNN
+	1    9000 1950
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R12
+U 1 1 5CD5EF64
+P 8750 1800
+F 0 "R12" V 8554 1800 50  0000 C CNN
+F 1 "330" V 8645 1800 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 8750 1800 50  0001 C CNN
+F 3 "~" H 8750 1800 50  0001 C CNN
+	1    8750 1800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8850 1800 8900 1800
+Wire Wire Line
+	9100 1950 9150 1950
+Connection ~ 9150 1950
 $Comp
 L power:GND #PWR0124
 U 1 1 5CA6EDED
@@ -1318,8 +1442,10 @@ Wire Wire Line
 	4250 6250 5100 6250
 Wire Wire Line
 	6250 6250 5600 6250
+Text Label 9250 1500 0    50   ~ 0
+FAN_PWM
 Text Label 5700 6250 0    50   ~ 0
-TIM_FAN_PWM
+FAN_PWM
 Wire Wire Line
 	6400 6350 5600 6350
 $Comp
@@ -1406,6 +1532,23 @@ Wire Wire Line
 	7850 2950 7850 2900
 Wire Wire Line
 	7200 2950 7850 2950
+$Comp
+L Device:R_Small R20
+U 1 1 5EE730FA
+P 9950 1100
+F 0 "R20" V 10054 1100 50  0000 C CNN
+F 1 "10k" V 10145 1100 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 9950 1100 50  0001 C CNN
+F 3 "~" H 9950 1100 50  0001 C CNN
+	1    9950 1100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9750 1100 9850 1100
+Wire Wire Line
+	10050 1100 10250 1100
+Wire Wire Line
+	10250 1100 10250 850 
 $Comp
 L power:+3.3V #PWR010
 U 1 1 5EFCD854
@@ -1667,6 +1810,66 @@ F 3 "" H 4900 3950 50  0001 C CNN
 	1    4900 3950
 	1    0    0    -1  
 $EndComp
+$Comp
+L agg-kicad:CONN_01x04 J2
+U 1 1 601F24E6
+P 10650 750
+F 0 "J2" H 10573 641 50  0000 R CNN
+F 1 "FAN_AUX" H 10573 550 50  0000 R CNN
+F 2 "Connector_JST:JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal" H 10650 750 50  0001 C CNN
+F 3 "" H 10650 750 50  0001 C CNN
+	1    10650 750 
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR06
+U 1 1 60239CE0
+P 8400 1450
+F 0 "#PWR06" H 8400 1300 50  0001 C CNN
+F 1 "+5V" H 8415 1623 50  0000 C CNN
+F 2 "" H 8400 1450 50  0001 C CNN
+F 3 "" H 8400 1450 50  0001 C CNN
+	1    8400 1450
+	0    1    -1   0   
+$EndComp
+$Comp
+L Jumper:Jumper_3_Bridged12 JP2
+U 1 1 60239CEA
+P 8350 1150
+F 0 "JP2" V 8396 1217 50  0000 L CNN
+F 1 "S1_VSEL" V 8305 1217 50  0000 L CNN
+F 2 "Jumper:SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm" H 8350 1150 50  0001 C CNN
+F 3 "~" H 8350 1150 50  0001 C CNN
+	1    8350 1150
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8400 1450 8350 1450
+Wire Wire Line
+	8350 1450 8350 1400
+Wire Wire Line
+	9150 1500 9150 1600
+Wire Wire Line
+	9150 1500 10350 1500
+Wire Wire Line
+	8350 750  8350 900 
+Wire Wire Line
+	10350 1500 10350 1050
+Wire Wire Line
+	10350 1050 10550 1050
+Wire Wire Line
+	10250 850  10550 850 
+Connection ~ 10250 850 
+Wire Wire Line
+	9950 750  10550 750 
+Wire Wire Line
+	9150 1400 10300 1400
+Wire Wire Line
+	10300 1400 10300 950 
+Wire Wire Line
+	10300 950  10550 950 
+Wire Wire Line
+	8500 1150 9150 1150
 Wire Wire Line
 	5600 6550 6250 6550
 Text Label 5700 6550 0    50   ~ 0
@@ -1764,6 +1967,24 @@ Wire Wire Line
 	6100 5350 6300 5350
 Wire Wire Line
 	6950 5350 6500 5350
+Wire Wire Line
+	9750 1000 9750 1100
+Wire Wire Line
+	9150 1150 9150 1400
+Wire Wire Line
+	8950 1800 8900 1800
+Connection ~ 8900 1800
+Wire Wire Line
+	8900 1800 8900 1950
+Wire Wire Line
+	9500 900  9450 900 
+Connection ~ 9500 900 
+Wire Wire Line
+	9750 700  9750 650 
+Wire Wire Line
+	9750 650  9950 650 
+Wire Wire Line
+	9950 650  9950 750 
 $Comp
 L Mechanical:MountingHole_Pad H1
 U 1 1 615A9446

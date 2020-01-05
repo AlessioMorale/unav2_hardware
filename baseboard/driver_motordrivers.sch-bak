@@ -1,0 +1,842 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 4 4
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:CP_Small C6
+U 1 1 5E94E6D0
+P 3450 1500
+F 0 "C6" H 3538 1546 50  0000 L CNN
+F 1 "47uF" H 3538 1455 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_6.3x5.8" H 3450 1500 50  0001 C CNN
+F 3 "https://www.mouser.co.uk/datasheet/2/293/e-ucq-1320835.pdf" H 3450 1500 50  0001 C CNN
+	1    3450 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C7
+U 1 1 5E94F135
+P 3800 1500
+F 0 "C7" H 3892 1546 50  0000 L CNN
+F 1 "1uF" H 3892 1455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 3800 1500 50  0001 C CNN
+F 3 "~" H 3800 1500 50  0001 C CNN
+	1    3800 1500
+	1    0    0    -1  
+$EndComp
+Text HLabel 3000 1300 0    50   Input ~ 0
+V_BATT
+Text HLabel 3000 1800 0    50   Input ~ 0
+GND
+Text HLabel 3000 4200 0    50   Input ~ 0
+TIM_MOT1_A
+Text HLabel 3000 4300 0    50   Input ~ 0
+TIM_MOT1_B
+Text HLabel 3000 4400 0    50   Input ~ 0
+TIM_MOT2_A
+Text HLabel 3000 4500 0    50   Input ~ 0
+TIM_MOT2_B
+Text HLabel 3000 1100 0    50   Input ~ 0
+3.3V
+$Comp
+L power:+3.3V #PWR016
+U 1 1 5E955FF5
+P 3150 1000
+F 0 "#PWR016" H 3150 850 50  0001 C CNN
+F 1 "+3.3V" H 3165 1173 50  0000 C CNN
+F 2 "" H 3150 1000 50  0001 C CNN
+F 3 "" H 3150 1000 50  0001 C CNN
+	1    3150 1000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3000 1100 3150 1100
+Wire Wire Line
+	3150 1100 3150 1000
+$Comp
+L agg-kicad:GND #PWR017
+U 1 1 5E956979
+P 3150 1900
+F 0 "#PWR017" H 3020 1940 50  0001 L CNN
+F 1 "GND" H 3150 1989 50  0000 C CNN
+F 2 "" H 3150 1900 50  0001 C CNN
+F 3 "" H 3150 1900 50  0001 C CNN
+	1    3150 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3000 1800 3150 1800
+Wire Wire Line
+	3150 1800 3150 1900
+Wire Wire Line
+	3000 1300 3450 1300
+Wire Wire Line
+	3800 1300 3800 1400
+Connection ~ 3450 1300
+Wire Wire Line
+	3450 1300 3800 1300
+$Comp
+L agg-kicad:GND #PWR018
+U 1 1 5E957832
+P 3450 1750
+F 0 "#PWR018" H 3320 1790 50  0001 L CNN
+F 1 "GND" H 3450 1839 50  0000 C CNN
+F 2 "" H 3450 1750 50  0001 C CNN
+F 3 "" H 3450 1750 50  0001 C CNN
+	1    3450 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 1600 3450 1650
+Wire Wire Line
+	3450 1650 3800 1650
+Wire Wire Line
+	3800 1650 3800 1600
+Connection ~ 3450 1650
+Wire Wire Line
+	3450 1650 3450 1750
+Wire Wire Line
+	3450 1300 3450 1400
+Text HLabel 3000 2250 0    50   Output ~ 0
+ADC_MOT1_CUR
+Text HLabel 3000 2350 0    50   Output ~ 0
+ADC_MOT2_CUR
+Wire Wire Line
+	3000 2250 8850 2250
+Wire Wire Line
+	10100 1650 10100 2350
+Wire Wire Line
+	10000 1650 10100 1650
+Wire Wire Line
+	8850 1650 8750 1650
+Wire Wire Line
+	8850 2250 8850 1650
+Wire Wire Line
+	10100 1500 10100 1450
+$Comp
+L agg-kicad:GND #PWR023
+U 1 1 5E95E483
+P 10100 1500
+F 0 "#PWR023" H 9970 1540 50  0001 L CNN
+F 1 "GND" H 10100 1589 50  0000 C CNN
+F 2 "" H 10100 1500 50  0001 C CNN
+F 3 "" H 10100 1500 50  0001 C CNN
+	1    10100 1500
+	1    0    0    -1  
+$EndComp
+Connection ~ 9600 1100
+Wire Wire Line
+	10100 1100 9600 1100
+Wire Wire Line
+	10100 1250 10100 1100
+Wire Wire Line
+	8850 1100 8350 1100
+Connection ~ 8850 1100
+Wire Wire Line
+	8850 1250 8850 1100
+Wire Wire Line
+	8850 1500 8850 1450
+$Comp
+L agg-kicad:GND #PWR021
+U 1 1 5E95C8E1
+P 8850 1500
+F 0 "#PWR021" H 8720 1540 50  0001 L CNN
+F 1 "GND" H 8850 1589 50  0000 C CNN
+F 2 "" H 8850 1500 50  0001 C CNN
+F 3 "" H 8850 1500 50  0001 C CNN
+	1    8850 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C9
+U 1 1 5E95C3D0
+P 10100 1350
+F 0 "C9" H 10192 1396 50  0000 L CNN
+F 1 "100nF" H 10192 1305 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 10100 1350 50  0001 C CNN
+F 3 "~" H 10100 1350 50  0001 C CNN
+	1    10100 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C8
+U 1 1 5E95BE18
+P 8850 1350
+F 0 "C8" H 8942 1396 50  0000 L CNN
+F 1 "100nF" H 8942 1305 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 8850 1350 50  0001 C CNN
+F 3 "~" H 8850 1350 50  0001 C CNN
+	1    8850 1350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9600 2050 9600 2150
+Wire Wire Line
+	8350 2150 8350 2050
+$Comp
+L agg-kicad:GND #PWR022
+U 1 1 5E95B49C
+P 9600 2150
+F 0 "#PWR022" H 9470 2190 50  0001 L CNN
+F 1 "GND" H 9542 2128 50  0000 R CNN
+F 2 "" H 9600 2150 50  0001 C CNN
+F 3 "" H 9600 2150 50  0001 C CNN
+	1    9600 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L agg-kicad:GND #PWR020
+U 1 1 5E95B0EC
+P 8350 2150
+F 0 "#PWR020" H 8220 2190 50  0001 L CNN
+F 1 "GND" H 8292 2128 50  0000 R CNN
+F 2 "" H 8350 2150 50  0001 C CNN
+F 3 "" H 8350 2150 50  0001 C CNN
+	1    8350 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9150 2900 10200 2900
+Wire Wire Line
+	9150 1750 9200 1750
+Wire Wire Line
+	9150 2900 9150 1750
+Wire Wire Line
+	7850 2600 10200 2600
+Wire Wire Line
+	7850 1750 7850 2600
+Wire Wire Line
+	7950 1750 7850 1750
+Wire Wire Line
+	8350 1100 8350 1250
+Connection ~ 8350 1100
+Wire Wire Line
+	9600 1100 8850 1100
+Wire Wire Line
+	9600 1250 9600 1100
+Wire Wire Line
+	8350 1000 8350 1100
+$Comp
+L power:+3.3V #PWR019
+U 1 1 5E9580FD
+P 8350 1000
+F 0 "#PWR019" H 8350 850 50  0001 C CNN
+F 1 "+3.3V" H 8365 1173 50  0000 C CNN
+F 2 "" H 8350 1000 50  0001 C CNN
+F 3 "" H 8350 1000 50  0001 C CNN
+	1    8350 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Sensor_Current:ACS711xEXLT-31AB U4
+U 1 1 5E955449
+P 9600 1650
+F 0 "U4" H 9600 2231 50  0000 C CNN
+F 1 "ACS711xEXLT-31AB" H 9600 2140 50  0000 C CNN
+F 2 "Sensor_Current:Allegro_QFN-12-10-1EP_3x3mm_P0.5mm" H 9950 1600 50  0001 L CIN
+F 3 "http://www.allegromicro.com/~/Media/Files/Datasheets/ACS711-Datasheet.ashx" H 9600 1650 50  0001 C CNN
+	1    9600 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Sensor_Current:ACS711xEXLT-31AB U3
+U 1 1 5E9534E3
+P 8350 1650
+F 0 "U3" H 8350 2231 50  0000 C CNN
+F 1 "ACS711xEXLT-31AB" H 8350 2140 50  0000 C CNN
+F 2 "Sensor_Current:Allegro_QFN-12-10-1EP_3x3mm_P0.5mm" H 8700 1600 50  0001 L CIN
+F 3 "http://www.allegromicro.com/~/Media/Files/Datasheets/ACS711-Datasheet.ashx" H 8350 1650 50  0001 C CNN
+	1    8350 1650
+	1    0    0    -1  
+$EndComp
+Text HLabel 10200 3050 2    50   Output ~ 0
+MOT2_B
+Text HLabel 10200 2900 2    50   Output ~ 0
+MOT2_A
+Text HLabel 10200 2750 2    50   Output ~ 0
+MOT1_B
+Text HLabel 10200 2600 2    50   Output ~ 0
+MOT1_A
+Wire Wire Line
+	3000 2350 10100 2350
+$Comp
+L agg-kicad:SiZ340DT Q1
+U 1 1 5E0E6002
+P 7100 3350
+F 0 "Q1" H 7188 3329 50  0000 L CNN
+F 1 "SiZ340DT" H 7188 3238 50  0000 L CNN
+F 2 "agg-kicad:PowerPair-3x3" H 7100 3050 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/62877/siz340dt.pdf" H 6850 3400 50  0001 C CNN
+F 4 "2422226" H 7050 3550 50  0001 C CNN "Farnell"
+	1    7100 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L agg-kicad:SiZ340DT Q1
+U 2 1 5E0E8678
+P 7100 3800
+F 0 "Q1" H 7188 3814 50  0000 L CNN
+F 1 "SiZ340DT" H 7188 3723 50  0000 L CNN
+F 2 "agg-kicad:PowerPair-3x3" H 7100 3500 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/62877/siz340dt.pdf" H 6850 3850 50  0001 C CNN
+F 4 "2422226" H 7050 4000 50  0001 C CNN "Farnell"
+	2    7100 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L agg-kicad:SiZ340DT Q3
+U 1 1 5E0E935D
+P 7950 3250
+F 0 "Q3" H 8038 3229 50  0000 L CNN
+F 1 "SiZ340DT" H 8038 3138 50  0000 L CNN
+F 2 "agg-kicad:PowerPair-3x3" H 7950 2950 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/62877/siz340dt.pdf" H 7700 3300 50  0001 C CNN
+F 4 "2422226" H 7900 3450 50  0001 C CNN "Farnell"
+	1    7950 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L agg-kicad:SiZ340DT Q3
+U 2 1 5E0E9368
+P 7950 3800
+F 0 "Q3" H 8038 3814 50  0000 L CNN
+F 1 "SiZ340DT" H 8038 3723 50  0000 L CNN
+F 2 "agg-kicad:PowerPair-3x3" H 7950 3500 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/62877/siz340dt.pdf" H 7700 3850 50  0001 C CNN
+F 4 "2422226" H 7900 4000 50  0001 C CNN "Farnell"
+	2    7950 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L agg-kicad:SiZ340DT Q2
+U 1 1 5E0EA5AB
+P 7000 5100
+F 0 "Q2" H 7088 5079 50  0000 L CNN
+F 1 "SiZ340DT" H 7088 4988 50  0000 L CNN
+F 2 "agg-kicad:PowerPair-3x3" H 7000 4800 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/62877/siz340dt.pdf" H 6750 5150 50  0001 C CNN
+F 4 "2422226" H 6950 5300 50  0001 C CNN "Farnell"
+	1    7000 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L agg-kicad:SiZ340DT Q2
+U 2 1 5E0EA5B6
+P 7000 5650
+F 0 "Q2" H 7088 5664 50  0000 L CNN
+F 1 "SiZ340DT" H 7088 5573 50  0000 L CNN
+F 2 "agg-kicad:PowerPair-3x3" H 7000 5350 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/62877/siz340dt.pdf" H 6750 5700 50  0001 C CNN
+F 4 "2422226" H 6950 5850 50  0001 C CNN "Farnell"
+	2    7000 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L agg-kicad:SiZ340DT Q4
+U 1 1 5E0EA5C1
+P 7950 5100
+F 0 "Q4" H 8038 5079 50  0000 L CNN
+F 1 "SiZ340DT" H 8038 4988 50  0000 L CNN
+F 2 "agg-kicad:PowerPair-3x3" H 7950 4800 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/62877/siz340dt.pdf" H 7700 5150 50  0001 C CNN
+F 4 "2422226" H 7900 5300 50  0001 C CNN "Farnell"
+	1    7950 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L agg-kicad:SiZ340DT Q4
+U 2 1 5E0EA5CC
+P 7950 5650
+F 0 "Q4" H 8038 5664 50  0000 L CNN
+F 1 "SiZ340DT" H 8038 5573 50  0000 L CNN
+F 2 "agg-kicad:PowerPair-3x3" H 7950 5350 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/62877/siz340dt.pdf" H 7700 5700 50  0001 C CNN
+F 4 "2422226" H 7900 5850 50  0001 C CNN "Farnell"
+	2    7950 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R7
+U 1 1 5E0EE5DB
+P 7950 6100
+F 0 "R7" H 8009 6146 50  0000 L CNN
+F 1 "R_Small" H 8009 6055 50  0000 L CNN
+F 2 "Resistor_SMD:R_1210_3225Metric" H 7950 6100 50  0001 C CNN
+F 3 "~" H 7950 6100 50  0001 C CNN
+	1    7950 6100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R6
+U 1 1 5E0EF411
+P 7950 4300
+F 0 "R6" H 8009 4346 50  0000 L CNN
+F 1 "R_Small" H 8009 4255 50  0000 L CNN
+F 2 "Resistor_SMD:R_1210_3225Metric" H 7950 4300 50  0001 C CNN
+F 3 "~" H 7950 4300 50  0001 C CNN
+	1    7950 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7000 5850 7000 5950
+Wire Wire Line
+	7000 5950 7950 5950
+Wire Wire Line
+	7950 5950 7950 5850
+Wire Wire Line
+	7950 6000 7950 5950
+Connection ~ 7950 5950
+Wire Wire Line
+	7950 5550 7950 5450
+Wire Wire Line
+	7000 5550 7000 5450
+Wire Wire Line
+	7950 4200 7950 4150
+Wire Wire Line
+	7950 4150 7100 4150
+Wire Wire Line
+	7100 4150 7100 4000
+Connection ~ 7950 4150
+Wire Wire Line
+	7950 4150 7950 4000
+Wire Wire Line
+	7100 3550 7100 3650
+Wire Wire Line
+	7950 3700 7950 3550
+Wire Wire Line
+	7100 3250 7100 3100
+Wire Wire Line
+	7100 3100 7950 3100
+Wire Wire Line
+	7950 3100 7950 3150
+Wire Wire Line
+	7000 5000 7000 4850
+Wire Wire Line
+	7000 4850 7950 4850
+Wire Wire Line
+	7950 4850 7950 5000
+Wire Wire Line
+	7950 4850 8550 4850
+Wire Wire Line
+	8550 4850 8550 3100
+Wire Wire Line
+	8550 3100 7950 3100
+Connection ~ 7950 4850
+Connection ~ 7950 3100
+Wire Wire Line
+	7100 3650 7350 3650
+Wire Wire Line
+	7350 3650 7350 1450
+Wire Wire Line
+	7350 1450 7950 1450
+Connection ~ 7100 3650
+Wire Wire Line
+	7100 3650 7100 3700
+Wire Wire Line
+	7000 5450 7300 5450
+Wire Wire Line
+	7300 5450 7300 4750
+Wire Wire Line
+	9000 4750 9000 1450
+Wire Wire Line
+	9000 1450 9200 1450
+Connection ~ 7000 5450
+Wire Wire Line
+	7000 5450 7000 5300
+Wire Wire Line
+	7950 5450 9750 5450
+Wire Wire Line
+	9750 5450 9750 3050
+Wire Wire Line
+	9750 3050 10200 3050
+Connection ~ 7950 5450
+Wire Wire Line
+	7950 5450 7950 5300
+Wire Wire Line
+	10200 2750 9300 2750
+Wire Wire Line
+	9300 2750 9300 3550
+Wire Wire Line
+	9300 3550 7950 3550
+Connection ~ 7950 3550
+Wire Wire Line
+	7950 3550 7950 3450
+Wire Wire Line
+	6150 3900 6900 3900
+Wire Wire Line
+	6150 4000 6750 4000
+Wire Wire Line
+	6750 4000 6750 3450
+Wire Wire Line
+	6750 3450 6900 3450
+Wire Wire Line
+	7600 2900 6450 2900
+Wire Wire Line
+	6450 2900 6450 3500
+Wire Wire Line
+	6450 3500 6150 3500
+Wire Wire Line
+	6150 3600 6550 3600
+Wire Wire Line
+	6550 3600 6550 3000
+Wire Wire Line
+	6550 3000 7500 3000
+Wire Wire Line
+	7500 3000 7500 3900
+Wire Wire Line
+	7500 3900 7750 3900
+Wire Wire Line
+	6150 4100 6800 4100
+Wire Wire Line
+	6800 4100 6800 3650
+Wire Wire Line
+	6800 3650 7100 3650
+Wire Wire Line
+	6150 3400 6350 3400
+Wire Wire Line
+	6350 3400 6350 2800
+Wire Wire Line
+	6350 2800 7700 2800
+Wire Wire Line
+	7700 2800 7700 3550
+Wire Wire Line
+	7700 3550 7950 3550
+Wire Wire Line
+	7100 4150 6600 4150
+Wire Wire Line
+	6600 4150 6600 3800
+Wire Wire Line
+	6600 3800 6150 3800
+Connection ~ 7100 4150
+Wire Wire Line
+	6150 3700 6700 3700
+Wire Wire Line
+	6700 3700 6700 4450
+Wire Wire Line
+	6700 4450 7950 4450
+Wire Wire Line
+	7950 4450 7950 4400
+$Comp
+L agg-kicad:GND #PWR029
+U 1 1 5E14FD27
+P 7950 6300
+F 0 "#PWR029" H 7820 6340 50  0001 L CNN
+F 1 "GND" H 7892 6278 50  0000 R CNN
+F 2 "" H 7950 6300 50  0001 C CNN
+F 3 "" H 7950 6300 50  0001 C CNN
+	1    7950 6300
+	1    0    0    -1  
+$EndComp
+$Comp
+L agg-kicad:GND #PWR027
+U 1 1 5E15031A
+P 6550 4250
+F 0 "#PWR027" H 6420 4290 50  0001 L CNN
+F 1 "GND" H 6492 4228 50  0000 R CNN
+F 2 "" H 6550 4250 50  0001 C CNN
+F 3 "" H 6550 4250 50  0001 C CNN
+	1    6550 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7300 4750 9000 4750
+Wire Wire Line
+	6150 4200 6550 4200
+Wire Wire Line
+	6550 4200 6550 4250
+Wire Wire Line
+	7950 5450 7650 5450
+Wire Wire Line
+	7650 5450 7650 4600
+Wire Wire Line
+	7650 4600 6500 4600
+Wire Wire Line
+	6500 4600 6500 4300
+Wire Wire Line
+	6500 4300 6150 4300
+Wire Wire Line
+	6150 4400 6450 4400
+Wire Wire Line
+	6450 4400 6450 4650
+Wire Wire Line
+	6450 4650 7550 4650
+Wire Wire Line
+	7550 4650 7550 5200
+Wire Wire Line
+	7550 5200 7750 5200
+Wire Wire Line
+	7750 5750 7500 5750
+Wire Wire Line
+	7500 5750 7500 4700
+Wire Wire Line
+	7500 4700 6400 4700
+Wire Wire Line
+	6400 4700 6400 4500
+Wire Wire Line
+	6400 4500 6150 4500
+$Comp
+L agg-kicad:GND #PWR026
+U 1 1 5E1A3E16
+P 6250 5300
+F 0 "#PWR026" H 6120 5340 50  0001 L CNN
+F 1 "GND" H 6192 5278 50  0000 R CNN
+F 2 "" H 6250 5300 50  0001 C CNN
+F 3 "" H 6250 5300 50  0001 C CNN
+	1    6250 5300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6150 5100 6250 5100
+Wire Wire Line
+	6250 5100 6250 5200
+Wire Wire Line
+	6250 5200 6150 5200
+Connection ~ 6250 5200
+Wire Wire Line
+	6250 5200 6250 5300
+Wire Wire Line
+	6150 5000 6650 5000
+Wire Wire Line
+	6650 5000 6650 5450
+Wire Wire Line
+	6650 5450 7000 5450
+Wire Wire Line
+	6150 4900 6700 4900
+Wire Wire Line
+	6700 4900 6700 5200
+Wire Wire Line
+	6700 5200 6800 5200
+Wire Wire Line
+	6150 4800 6600 4800
+Wire Wire Line
+	6600 4800 6600 5750
+Wire Wire Line
+	6600 5750 6800 5750
+Wire Wire Line
+	6150 4700 6350 4700
+Wire Wire Line
+	6350 4700 6350 5950
+Wire Wire Line
+	6350 5950 7000 5950
+Connection ~ 7000 5950
+Wire Wire Line
+	6150 4600 6300 4600
+Wire Wire Line
+	6300 4600 6300 6250
+Wire Wire Line
+	6300 6250 7950 6250
+Wire Wire Line
+	7950 6250 7950 6200
+Wire Wire Line
+	7950 6300 7950 6250
+Connection ~ 7950 6250
+$Comp
+L Device:C_Small C11
+U 1 1 5E1EE73E
+P 4850 3300
+F 0 "C11" V 4621 3300 50  0000 C CNN
+F 1 "0.1uF 20V X7R" V 4712 3300 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 4850 3300 50  0001 C CNN
+F 3 "~" H 4850 3300 50  0001 C CNN
+	1    4850 3300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4950 3300 5150 3300
+Wire Wire Line
+	4750 3300 4700 3300
+Wire Wire Line
+	4700 3300 4700 3400
+Wire Wire Line
+	4700 3400 5150 3400
+$Comp
+L Device:C_Small C12
+U 1 1 5E1FBA04
+P 4900 3500
+F 0 "C12" V 4671 3500 50  0000 C CNN
+F 1 "1uF 16V X7R" V 4762 3500 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 4900 3500 50  0001 C CNN
+F 3 "~" H 4900 3500 50  0001 C CNN
+	1    4900 3500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5000 3500 5150 3500
+Wire Wire Line
+	3800 1300 4250 1300
+Wire Wire Line
+	4250 1300 4250 2700
+Wire Wire Line
+	4250 3500 4700 3500
+Connection ~ 3800 1300
+Wire Wire Line
+	4700 3500 4700 3600
+Wire Wire Line
+	4700 3600 5150 3600
+Connection ~ 4700 3500
+Wire Wire Line
+	4700 3500 4800 3500
+$Comp
+L Device:C_Small C13
+U 1 1 5E21183F
+P 4950 3800
+F 0 "C13" V 4721 3800 50  0000 C CNN
+F 1 "1uF 16V X7R" V 4812 3800 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 4950 3800 50  0001 C CNN
+F 3 "~" H 4950 3800 50  0001 C CNN
+	1    4950 3800
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C_Small C10
+U 1 1 5E211F72
+P 4750 3900
+F 0 "C10" V 4521 3900 50  0000 C CNN
+F 1 "0.1uF 20V X7R" V 4612 3900 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 4750 3900 50  0001 C CNN
+F 3 "~" H 4750 3900 50  0001 C CNN
+	1    4750 3900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5150 3800 5050 3800
+Wire Wire Line
+	5150 3900 4850 3900
+Wire Wire Line
+	4850 3800 4500 3800
+Wire Wire Line
+	4500 3800 4500 3700
+Wire Wire Line
+	4500 3700 5150 3700
+Wire Wire Line
+	4650 3900 4500 3900
+Wire Wire Line
+	4500 3900 4500 3800
+Connection ~ 4500 3800
+$Comp
+L agg-kicad:GND #PWR024
+U 1 1 5E230DFC
+P 4350 3950
+F 0 "#PWR024" H 4220 3990 50  0001 L CNN
+F 1 "GND" H 4292 3928 50  0000 R CNN
+F 2 "" H 4350 3950 50  0001 C CNN
+F 3 "" H 4350 3950 50  0001 C CNN
+	1    4350 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4350 3950 4350 3800
+Wire Wire Line
+	4350 3800 4500 3800
+Wire Wire Line
+	3000 4200 5150 4200
+Wire Wire Line
+	5150 4300 3000 4300
+Wire Wire Line
+	5150 4400 3000 4400
+Wire Wire Line
+	3000 4500 5150 4500
+Text HLabel 3000 4600 0    50   Input ~ 0
+SPI_SCLK
+Text HLabel 3000 4700 0    50   Input ~ 0
+SPI_MOSI
+Text HLabel 3000 4800 0    50   Input ~ 0
+SPI_CS1
+Text HLabel 3000 4900 0    50   Output ~ 0
+SPI_MISO
+Text HLabel 3000 5000 0    50   Output ~ 0
+I_FAULT
+$Comp
+L agg-kicad:GND #PWR025
+U 1 1 5E28F614
+P 5050 5200
+F 0 "#PWR025" H 4920 5240 50  0001 L CNN
+F 1 "GND" H 4992 5178 50  0000 R CNN
+F 2 "" H 5050 5200 50  0001 C CNN
+F 3 "" H 5050 5200 50  0001 C CNN
+	1    5050 5200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 5200 5050 5100
+Wire Wire Line
+	5050 5100 5150 5100
+Wire Wire Line
+	3000 4600 5150 4600
+Wire Wire Line
+	5150 4700 3000 4700
+Wire Wire Line
+	3000 4800 5150 4800
+Wire Wire Line
+	5150 4900 3000 4900
+Wire Wire Line
+	3000 5000 5150 5000
+Wire Wire Line
+	7100 3100 7100 2700
+Wire Wire Line
+	7100 2700 4250 2700
+Connection ~ 4250 2700
+Wire Wire Line
+	4250 2700 4250 3500
+Connection ~ 7100 3100
+Wire Wire Line
+	7600 2900 7600 3350
+Wire Wire Line
+	7600 3350 7750 3350
+$Comp
+L agg-kicad:GND #PWR028
+U 1 1 5E14F4C1
+P 7950 4500
+F 0 "#PWR028" H 7820 4540 50  0001 L CNN
+F 1 "GND" H 7892 4478 50  0000 R CNN
+F 2 "" H 7950 4500 50  0001 C CNN
+F 3 "" H 7950 4500 50  0001 C CNN
+	1    7950 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7950 4450 7950 4500
+Connection ~ 7950 4450
+NoConn ~ 8150 2050
+NoConn ~ 8250 2050
+NoConn ~ 8450 2050
+NoConn ~ 8550 2050
+NoConn ~ 8750 1750
+NoConn ~ 9400 2050
+NoConn ~ 9500 2050
+NoConn ~ 9700 2050
+NoConn ~ 9800 2050
+NoConn ~ 10000 1750
+NoConn ~ 5150 4100
+Text HLabel 3000 4100 0    50   Input ~ 0
+MOT_ENn
+$Comp
+L agg-kicad:DRV8704 IC2
+U 1 1 5E0E0A1D
+P 5650 4300
+F 0 "IC2" H 5650 5525 50  0000 C CNN
+F 1 "DRV8704" H 5650 5434 50  0000 C CNN
+F 2 "agg-kicad:HTSSOP-38" H 5250 3100 50  0001 L CNN
+F 3 "http://www.ti.com/lit/ds/symlink/drv8704.pdf" H 5250 3000 50  0001 L CNN
+F 4 "2611251" H 5250 2900 50  0001 L CNN "Farnell"
+	1    5650 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3000 4100 4900 4100
+Wire Wire Line
+	4900 4100 4900 4000
+Wire Wire Line
+	4900 4000 5150 4000
+$EndSCHEMATC
