@@ -353,8 +353,6 @@ Wire Wire Line
 Wire Wire Line
 	3900 2200 3050 2200
 Wire Wire Line
-	3900 2400 3050 2400
-Wire Wire Line
 	3900 2600 3050 2600
 Wire Wire Line
 	800  4100 1650 4100
@@ -424,7 +422,7 @@ Text Label 850  4500 0    50   ~ 0
 O_PWR_SBC_EN
 Text Label 850  4800 0    50   ~ 0
 SER2_TX
-Text Label 3850 2400 2    50   ~ 0
+Text Label 3850 1900 2    50   ~ 0
 TIM_ENC2_A
 Text Label 3450 2900 0    50   ~ 0
 O_PWR_MOT_EN
@@ -898,26 +896,26 @@ Wire Wire Line
 $Comp
 L Device:R_Small R8
 U 1 1 5D535074
-P 1600 1600
-F 0 "R8" V 1704 1600 50  0000 C CNN
-F 1 "47k" V 1795 1600 50  0000 C CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" H 1600 1600 50  0001 C CNN
-F 3 "~" H 1600 1600 50  0001 C CNN
-F 4 "" H 1600 1600 50  0001 C CNN "LCSC Part Number"
-F 5 "C25792" H 1600 1600 50  0001 C CNN "LCSC"
-	1    1600 1600
-	1    0    0    -1  
+P 1200 2100
+F 0 "R8" V 1304 2100 50  0000 C CNN
+F 1 "47k" V 1395 2100 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 1200 2100 50  0001 C CNN
+F 3 "~" H 1200 2100 50  0001 C CNN
+F 4 "" H 1200 2100 50  0001 C CNN "LCSC Part Number"
+F 5 "C25792" H 1200 2100 50  0001 C CNN "LCSC"
+	1    1200 2100
+	0    1    1    0   
 $EndComp
 $Comp
 L Device:Jumper_NO_Small JP1
 U 1 1 5D5753A4
-P 1200 2100
-F 0 "JP1" H 1200 2285 50  0000 C CNN
-F 1 "BOOT" H 1200 2194 50  0000 C CNN
-F 2 "Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm" H 1200 2100 50  0001 C CNN
-F 3 "~" H 1200 2100 50  0001 C CNN
-	1    1200 2100
-	1    0    0    -1  
+P 1600 1600
+F 0 "JP1" H 1600 1785 50  0000 C CNN
+F 1 "BOOT" H 1600 1694 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm" H 1600 1600 50  0001 C CNN
+F 3 "~" H 1600 1600 50  0001 C CNN
+	1    1600 1600
+	0    1    1    0   
 $EndComp
 $Comp
 L MCU_ST_STM32F4:STM32F405RGTx U5
@@ -1540,12 +1538,12 @@ $EndComp
 $Comp
 L Connector:TestPoint TP7
 U 1 1 5E54DA2D
-P 3900 2400
-F 0 "TP7" V 3854 2588 50  0000 L CNN
-F 1 "TestPoint" V 3945 2588 50  0000 L CNN
-F 2 "TestPoint:TestPoint_THTPad_1.0x1.0mm_Drill0.5mm" H 4100 2400 50  0001 C CNN
-F 3 "~" H 4100 2400 50  0001 C CNN
-	1    3900 2400
+P 3900 1900
+F 0 "TP7" V 3854 2088 50  0000 L CNN
+F 1 "TestPoint" V 3945 2088 50  0000 L CNN
+F 2 "TestPoint:TestPoint_THTPad_1.0x1.0mm_Drill0.5mm" H 4100 1900 50  0001 C CNN
+F 3 "~" H 4100 1900 50  0001 C CNN
+	1    3900 1900
 	0    1    1    0   
 $EndComp
 $Comp
